@@ -1,0 +1,69 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Find jobs in your network",
+    description:
+      "There's plenty of opportunities out there. We'll help you find them.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "Stay up-to-date with industry trends",
+    description:
+      "Gain a competitive edge by accessing the latest insights, news, and trends in the investment banking world.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "Expand your knowledge and skills",
+    description:
+      "Enhance your expertise in investment banking through comprehensive resources and educational materials. Along with our #asks channel",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Networking and career advancement",
+    description:
+      "Connect with professionals at all levels of the industry, including recruiters, mentors, and seasoned veterans.",
+    icon: "bx:bxs-bot",
+  },
+  {
+    title: "Engage in meaningful discussions",
+    description:
+      "Participate in thought-provoking discussions and debates on topics relevant to investment banking.",
+    icon: "bx:bxs-file-find",
+  },
+  {
+    title: "Cxclusive events and resources",
+    description:
+      "Enjoy exclusive benefits as a member of our iBanking community. Be the first to find out about industry conferences, networking events, and workshops featuring renowned speakers and experts.",
+    icon: "bx:bxs-user",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Everything you need to kickstart your banking career
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    We know the grind. We've been there. We've done that. From startups to real estate, closing transactions is a lot of work.
+    That's why we made this community to share deals around, network, and close that check.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
